@@ -34,5 +34,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
     implementation 'org.xutils:xutils:3.9.0'
+    implementation 'com.blankj:utilcode:1.29.0'
 
 }

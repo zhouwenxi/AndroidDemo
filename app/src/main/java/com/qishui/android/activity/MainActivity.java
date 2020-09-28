@@ -7,6 +7,8 @@ import android.widget.EditText;
 
 import com.qishui.android.R;
 import com.qishui.android.base.BaseActivity;
+import com.qishui.android.service.TestService;
+import com.qishui.android.utils.PermissionHandle;
 
 /**
  * 主页面
@@ -35,6 +37,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
+                PermissionHandle.requestCall();
             }
         });
 
@@ -67,6 +70,12 @@ public class MainActivity extends BaseActivity {
             case R.id.btn3:
                 showToast("点击3333..." + content);
                 setSampleLayout(R.layout.frag_sample);
+                break;
+            case R.id.btn6:
+                startService(new Intent(MainActivity.this, TestService.class));
+                break;
+            case R.id.btn7:
+                stopService(new Intent(MainActivity.this, TestService.class));
                 break;
         }
 

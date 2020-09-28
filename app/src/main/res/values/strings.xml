@@ -5,4 +5,8 @@
 
     <string name="main_btn_name5">保存内容</string>
 
+    <string name="main_btn_name6">开启服务</string>
+    <string name="main_btn_name7">关闭服务</string>
+
+
 </resources>
