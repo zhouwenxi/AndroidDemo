@@ -1,4 +1,4 @@
-package com.qishui.android.Activity;
+package com.qishui.android.activity;
 
 import com.qishui.android.R;
 import com.qishui.android.base.BaseActivity;

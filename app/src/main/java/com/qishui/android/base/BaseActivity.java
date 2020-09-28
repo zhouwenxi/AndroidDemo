@@ -2,6 +2,7 @@ package com.qishui.android.base;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,6 +24,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//竖屏
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);//横屏
+
         mActivity = BaseActivity.this;
         context = getApplicationContext();
         setContentView(setLayoutID());

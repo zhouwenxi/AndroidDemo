@@ -1,12 +1,12 @@
-package com.qishui.android.Activity;
+package com.qishui.android.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.EditText;
 
 import com.qishui.android.R;
 import com.qishui.android.base.BaseActivity;
-import com.qishui.android.utils.FileUtils;
 
 /**
  * 主页面
@@ -35,12 +35,18 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                EditText et = findViewById(R.id.et);
-                String content = getEditText(et);
-                FileUtils.sd();
-
             }
         });
+
+        //保存数据
+        SharedPreferences sharedPreferences = getSharedPreferences("info", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("key1", "name1");
+        editor.apply();
+
+        //取数据
+        String key1 = sharedPreferences.getString("key1", "");
+
     }
 
     /**
@@ -72,8 +78,9 @@ public class MainActivity extends BaseActivity {
     class MyOnClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            showToast("点击4444...");
 
+            Intent intent = new Intent(MainActivity.this, ListActivity.class);
+            startActivity(intent);
         }
     }
 
