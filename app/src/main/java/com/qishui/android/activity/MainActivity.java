@@ -77,6 +77,14 @@ public class MainActivity extends BaseActivity {
             case R.id.btn7:
                 stopService(new Intent(MainActivity.this, TestService.class));
                 break;
+            case R.id.btn8:
+                Intent intent = new Intent(MainActivity.this, DrawBaseActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn9:
+                Intent intent2 = new Intent(MainActivity.this, BigPicActivity.class);
+                startActivity(intent2);
+                break;
         }
 
     }

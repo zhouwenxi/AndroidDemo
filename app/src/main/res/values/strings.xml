@@ -8,5 +8,7 @@
     <string name="main_btn_name6">开启服务</string>
     <string name="main_btn_name7">关闭服务</string>
 
+    <string name="main_btn_name8">绘制</string>
+    <string name="main_btn_name9">加载</string>
 
 </resources>

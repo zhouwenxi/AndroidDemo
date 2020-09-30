@@ -5,6 +5,8 @@
     <string name="main_btn_name5">save_content</string>
     <string name="main_btn_name6">satrtservice</string>
     <string name="main_btn_name7">stopService</string>
+    <string name="main_btn_name8">draw</string>
+    <string name="main_btn_name9">load</string>
 
 
 </resources>
