@@ -8,6 +8,7 @@ import android.widget.EditText;
 import com.qishui.android.R;
 import com.qishui.android.base.BaseActivity;
 import com.qishui.android.service.TestService;
+import com.qishui.android.utils.ClickProxy;
 import com.qishui.android.utils.PermissionHandle;
 
 /**
@@ -22,14 +23,14 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setEvent() {
 
-        findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn1).setOnClickListener(new ClickProxy(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 showToast("点击....");
                 setSampleLayout(R.layout.linear_sample);
             }
-        });
+        }));
 
         findViewById(R.id.btn4).setOnClickListener(new MyOnClickListener());
 

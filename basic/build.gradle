@@ -1,22 +1,19 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
-
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
+
     defaultConfig {
-        applicationId "com.qishui.android"
         minSdkVersion 14
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,13 +23,14 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testApi 'junit:junit:4.12'
+    androidTestApi 'androidx.test.ext:junit:1.1.2'
+    androidTestApi 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation project(':basic')
-
-
+    api 'androidx.constraintlayout:constraintlayout:2.0.1'
+    api 'androidx.appcompat:appcompat:1.2.0'
+    api 'org.xutils:xutils:3.9.0'
+    api 'com.blankj:utilcode:1.29.0'
 }
